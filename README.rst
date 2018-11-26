@@ -47,8 +47,7 @@ For run the JAR file packed, execute the follow command: ::
 This show the ``Hi meaasae at /tmp/longLiveLog.out`` message.
 
 Kill the jar process: ::
-
-pkill -f LongLive
+  pkill -f LongLive
 
 start/stop script
 --------------------
