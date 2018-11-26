@@ -44,25 +44,38 @@ For run the JAR file packed, execute the follow command: ::
 
   java -jar LongLive.jar
 
-This show the ``Hi meaasae at /tmp/longLiveLog.out`` message.
+This show the ``Hi meaasae at /tmp/longLiveLog.out`` message. Afterwords kill the jar process with command: :: 
 
-Kill the jar process: ::
   pkill -f LongLive
 
 start/stop script
---------------------
-Place start.sh and stop.sh in /home/nikhil/longlive
-set the permission: ::
+-------------------
+Place start.sh and stop.sh in ``/home/nikhil/longlive`` and set the permission: ::
 
-cd home/nikhil/longlive
-chmod +x start.sh
-chmod +x stop.sh
+  cd home/nikhil/longlive
+  chmod +x start.sh
+  chmod +x stop.sh
 
 Add service in systemd:
 -----------------------
 create longlive.service file at: ::
-/etc/systemd/system/longlive.service
 
+  /etc/systemd/system/longlive.service
+
+Execute commands:
+To load the longlive.servive: ::
+  systemctl daemon-reload
+To start service: ::
+  systemctl start longlive.service
+To start service itself after reboot of os: ::
+  systemctl enable longlive.service
+To check the status: ::  
+  systemctl status service
+To check the process:
+  pgrep -f LongLive           #this is casesensative
+  ps -ef | grep -i longlive   # this is not case sensitive
+To Stop the service
+systemctl stop longlive.service
 
 Reference
 =========
