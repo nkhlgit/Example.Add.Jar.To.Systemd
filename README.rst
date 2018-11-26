@@ -15,7 +15,8 @@ The structure ``LongLivee`` package is like this: ::
   `-- README.md
 
 I perfomed the operation in: ::
-/home/nikhil/longlive
+
+  /home/nikhil/longlive
 
 Compile class
 -------------
