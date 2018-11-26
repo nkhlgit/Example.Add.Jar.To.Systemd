@@ -62,8 +62,7 @@ chmod +x stop.sh
 Add service in systemd:
 -----------------------
 create longlive.service file at: ::
-
-etc/systemd/system/longlive.service
+/etc/systemd/system/longlive.service
 
 
 Reference
