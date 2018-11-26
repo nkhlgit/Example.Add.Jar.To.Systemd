@@ -54,6 +54,7 @@ start/stop script
 --------------------
 Place start.sh and stop.sh in /home/nikhil/longlive
 set the permission::
+
 cd home/nikhil/longlive
 chmod +x start.sh
 chmod +x stop.sh
@@ -61,6 +62,7 @@ chmod +x stop.sh
 Add service in systemd:
 -----------------------
 create longlive.service file in::
+
 # cat /etc/systemd/system/longlive.service
 [Unit]
 Description=This will start longlive java process
@@ -75,8 +77,6 @@ RemainAfterExit=yes
 
 [Install]
 WantedBy=multi-user.target
-
-
 
 
 
