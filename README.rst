@@ -61,23 +61,9 @@ chmod +x stop.sh
 
 Add service in systemd:
 -----------------------
-create longlive.service file in::
+create longlive.service file at::
 
 # cat /etc/systemd/system/longlive.service
-[Unit]
-Description=This will start longlive java process
-After=syslog.target
-
-[Service]
-Type=forking
-ExecStart=/home/nikhil/longlive/start.sh
-ExecStop=/home/nikhillLonglive/stop.sh
-TimeoutStartSec=5
-RemainAfterExit=yes
-
-[Install]
-WantedBy=multi-user.target
-
 
 
 Reference
