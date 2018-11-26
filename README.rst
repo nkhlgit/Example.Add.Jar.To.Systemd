@@ -46,14 +46,14 @@ For run the JAR file packed, execute the follow command: ::
 
 This show the ``Hi meaasae at /tmp/longLiveLog.out`` message.
 
-Kill the jar process::
+Kill the jar process: ::
 
 pkill -f LongLive
 
 start/stop script
 --------------------
 Place start.sh and stop.sh in /home/nikhil/longlive
-set the permission::
+set the permission: ::
 
 cd home/nikhil/longlive
 chmod +x start.sh
@@ -61,9 +61,9 @@ chmod +x stop.sh
 
 Add service in systemd:
 -----------------------
-create longlive.service file at::
+create longlive.service file at: ::
 
-# cat /etc/systemd/system/longlive.service
+etc/systemd/system/longlive.service
 
 
 Reference
