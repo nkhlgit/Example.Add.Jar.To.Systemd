@@ -64,18 +64,24 @@ create longlive.service file at: ::
 
 Execute commands:
 To load the longlive.servive: ::
+
   systemctl daemon-reload
 To start service: ::
+
   systemctl start longlive.service
 To start service itself after reboot of os: ::
+
   systemctl enable longlive.service
 To check the status: ::  
+ 
   systemctl status service
-To check the process:
-  pgrep -f LongLive           #this is casesensative
-  ps -ef | grep -i longlive   # this is not case sensitive
-To Stop the service
-systemctl stop longlive.service
+To check the process: ::
+
+  pgrep -f LongLive           # casesensative
+  ps -ef | grep -i longlive   # not case sensitive
+To Stop the service: ::
+
+  systemctl stop longlive.service
 
 Reference
 =========
