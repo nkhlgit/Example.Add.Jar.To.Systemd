@@ -1,0 +1,13 @@
+Unit]
+Description=This will start longlive java process
+After=syslog.target
+
+[Service]
+Type=forking
+ExecStart=/home/nikhil/longlive/start.sh
+ExecStop=/home/nikhillLonglive/stop.sh
+TimeoutStartSec=5
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
