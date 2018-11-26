@@ -37,14 +37,48 @@ For pack the main class for package as a JAR file, execute the follow command: :
   jar cfe LongLive.jar LongLive.Main LongLive/Main.class
 
 
-Run a JAR file
---------------
+Run a JAR file to test
+----------------------
 
 For run the JAR file packed, execute the follow command: ::
 
   java -jar LongLive.jar
 
 This show the ``Hi meaasae at /tmp/longLiveLog.out`` message.
+
+Kill the jar process
+--------------------
+pkill -f LongLive
+
+start/stop script
+--------------------
+Place start.sh and stop.sh in /home/nikhil/longlive
+set the permission::
+cd home/nikhil/longlive
+chmod +x start.sh
+chmod +x stop.sh
+
+Add service in systemd:
+-----------------------
+create longlive.service file in::
+# cat /etc/systemd/system/longlive.service
+[Unit]
+Description=This will start longlive java process
+After=syslog.target
+
+[Service]
+Type=forking
+ExecStart=/home/nikhil/longlive/start.sh
+ExecStop=/home/nikhillLonglive/stop.sh
+TimeoutStartSec=5
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+
 
 Reference
 =========
