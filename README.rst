@@ -1,7 +1,7 @@
 Example.Add.Jar.To.Systemd
 =======================
 
-This is Example for a jar file created and added to systemd on Redhat/Centos..
+This is an example for a jar file created for infine while loop; and added to systemd  as service on Redhat/Centos.
 
 The structure ``LongLivee`` package is like this: ::
 
@@ -13,6 +13,9 @@ The structure ``LongLivee`` package is like this: ::
   |-- longlive.service
   |-- LICENSE
   `-- README.md
+
+I perfomed the operation in: ::
+/home/nikhil/longlive
 
 Compile class
 -------------
