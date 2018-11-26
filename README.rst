@@ -8,6 +8,9 @@ The structure ``LongLivee`` package is like this: ::
   Example.Add.Jar.To.Systemd/
   |-- LongLive
   |   `-- Main.java
+  |-- start.sh
+  |-- stop.sh
+  |-- longlive.service
   |-- LICENSE
   `-- README.md
 
