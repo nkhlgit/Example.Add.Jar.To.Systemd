@@ -23,7 +23,7 @@ Compile class
 
 For compile the main class for package, execute the follow command: ::
 
-  javac LongLive/Main.java
+  javac com/LongLive/LongLive.java
 
 This generate the ``Main.class`` file into ``LongLive`` directory.
 
@@ -32,7 +32,7 @@ Run class
 
 For run the main class for package, execute the follow command: ::
 
-  java -cp . LongLive.Main
+  java -cp . com.LongLive.LongLive
 
 This show the ``Hi`` message.
 
@@ -41,7 +41,7 @@ Create a JAR file
 
 For pack the main class for package as a JAR file, execute the follow command: ::
 
-  jar cfe LongLive.jar LongLive.Main LongLive/Main.class
+  jar cvmf META-INF\MANIFEST.MF LongLive.jar com\LongLive\*.class 
 
 
 Run a JAR file to test
