@@ -1,4 +1,4 @@
-package LongLive;
+package com.LongLive;
 
 import java.io.File;
 import java.io.IOException;
