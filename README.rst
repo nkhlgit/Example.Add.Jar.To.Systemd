@@ -7,7 +7,10 @@ The structure ``LongLivee`` package is like this: ::
 
   Example.Add.Jar.To.Systemd/
   |-- LongLive
-  |   `-- Main.java
+  |       |-- META-INF
+  |       |        |-- MANIFEST.MF     
+  |       |-- com 
+  |            |-- LongLive.java
   |-- start.sh
   |-- stop.sh
   |-- longlive.service
